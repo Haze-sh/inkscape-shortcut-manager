@@ -17,7 +17,8 @@ def get(target=None):
         extra_args += ['-target', target]
 
     result = subprocess.run(
-        ['xclip', '-selection', 'c', '-o'] + extra_args,
+#        ['xclip', '-selection', 'c', '-o'] + extra_args,
+        ['wl-paste'],
         stdout=subprocess.PIPE,
         universal_newlines=True
     )
